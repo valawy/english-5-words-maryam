@@ -71,6 +71,24 @@
 
 <footer>English 5 Words a Day · Made with ❤️ for learning</footer>
 
+
+<!-- DAY SELECTOR -->
+<div id="dayModal" class="modal hidden" aria-hidden="true">
+  <div class="modal-overlay day-overlay"></div>
+  <div class="day-selector-shell">
+    <button id="closeDayModal" class="close" aria-label="Tutup">×</button>
+    <div class="day-selector-head">
+      <span id="selectorWeekLabel" class="eyebrow">WEEK 1</span>
+      <h2 id="selectorWeekTitle">Numbers</h2>
+      <p>Pilih materi yang ingin dipelajari.</p>
+    </div>
+    <div id="dayList" class="day-list"></div>
+    <div class="support-note">
+      💡 Maryam bebas memilih Day 1–4. Day 5 adalah Weekly Review untuk mengulang semua 20 kata dalam minggu tersebut.
+    </div>
+  </div>
+</div>
+
 <!-- LEARNING ENGINE -->
 <div id="lessonModal" class="modal hidden" aria-hidden="true">
   <div class="modal-overlay"></div>
@@ -104,6 +122,6 @@
   </div>
 </div>
 
-<script src="js/app.js?v=5"></script>
+<script src="js/app.js?v=6"></script>
 </body>
 </html>

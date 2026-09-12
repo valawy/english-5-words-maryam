@@ -33,3 +33,17 @@ footer{text-align:center;border-top:1px solid var(--border);padding:28px;color:v
 @media(max-width:850px){.weeks-grid{grid-template-columns:repeat(3,1fr)}.stats-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:650px){.container{padding-top:22px}.hero{padding:27px;flex-direction:column;align-items:flex-start}.hero-character{align-self:center}.card{padding:21px}.word-preview{grid-template-columns:repeat(2,1fr)}.weeks-grid{grid-template-columns:repeat(2,1fr)}.learning-shell{padding:20px}.stepper{grid-template-columns:repeat(3,1fr)}.engine-content{min-height:420px;padding:18px}.word-grid,.options{grid-template-columns:1fr}.say-word{font-size:43px}.learning-top h2{font-size:25px}}
 @media(max-width:420px){.weeks-grid{grid-template-columns:1fr}.stats-grid{grid-template-columns:repeat(2,1fr)}.step span{font-size:11px}.nav-btn{min-width:105px;padding:11px 12px}}
+
+/* V6 — manual day selection */
+.day-selector-shell{position:relative;z-index:2;background:#fff;width:min(700px,100%);max-height:92vh;overflow:auto;border-radius:26px;padding:28px;box-shadow:0 25px 80px #0004}
+.day-selector-head{padding-right:45px;margin-bottom:20px}.day-selector-head h2{font-size:30px;margin-bottom:5px}.day-selector-head p{color:var(--muted)}
+.day-list{display:grid;gap:10px}
+.day-choice{width:100%;display:flex;align-items:center;gap:14px;text-align:left;border:1px solid var(--border);background:#fff;border-radius:17px;padding:15px;transition:.18s}
+.day-choice:hover{border-color:#a5b4fc;background:#fafaff;transform:translateY(-1px)}
+.day-choice.completed{border-color:#bbf7d0;background:#f0fdf4}
+.day-choice.review{background:#fffaf0;border-color:#fde68a}
+.day-number{width:44px;height:44px;display:grid;place-items:center;border-radius:13px;background:var(--soft);color:var(--primary);font-weight:900;flex:none}
+.day-choice.completed .day-number{background:#dcfce7;color:var(--success)}
+.day-choice.review .day-number{background:#fef3c7;color:#b45309}
+.day-main{flex:1}.day-main strong{display:block;font-size:16px;margin-bottom:3px}.day-main span{display:block;color:var(--muted);font-size:12px}.day-arrow{font-size:20px;color:var(--primary);font-weight:900}
+@media(max-width:650px){.day-selector-shell{padding:21px}.day-selector-head h2{font-size:25px}}

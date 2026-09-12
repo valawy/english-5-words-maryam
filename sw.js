@@ -1,32 +1,8 @@
-const CACHE = "english-maryam-v5";
+const CACHE = "english-maryam-v6";
 const FILES = [
-  "./",
-  "./index.html",
-  "./css/style.css",
-  "./js/app.js?v=5",
-  "./data/vocabulary.json?v=5",
-  "./data/course.json",
-  "./manifest.json"
+  "./","./index.html","./css/style.css","./js/app.js?v=6",
+  "./data/vocabulary.json?v=6","./data/course.json","./manifest.json"
 ];
-
-self.addEventListener("install", (event) => {
-  event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(FILES)));
-  self.skipWaiting();
-});
-
-self.addEventListener("activate", (event) => {
-  event.waitUntil(
-    caches.keys().then((keys) =>
-      Promise.all(
-        keys.filter((key) => key !== CACHE).map((key) => caches.delete(key))
-      )
-    )
-  );
-  self.clients.claim();
-});
-
-self.addEventListener("fetch", (event) => {
-  event.respondWith(
-    caches.match(event.request).then((cached) => cached || fetch(event.request))
-  );
-});
+self.addEventListener("install",e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES)));self.skipWaiting()});
+self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==CACHE).map(x=>caches.delete(x)))));self.clients.claim()});
+self.addEventListener("fetch",e=>e.respondWith(caches.match(e.request).then(x=>x||fetch(e.request))));

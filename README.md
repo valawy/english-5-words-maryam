@@ -1,25 +1,14 @@
 # English 5 Words a Day — Maryam
 
-Aplikasi belajar Bahasa Inggris berbasis HTML, CSS, JavaScript, JSON, dan PWA.
+## V6 — Manual Day Selection + Weekly Review
 
-## Current release: Learning Engine
-- 52 weeks
-- 208 learning days
-- 1,040 vocabulary entries
-- See It
-- Hear It
-- Say It (speech recognition when supported)
-- Remember It (meaning quiz)
-- Use It (sentence practice)
-- Play It (spelling game)
-- XP, streak, mastery, and local progress
+- 52 weeks / 208 daily lessons / 1,040 vocabulary entries
+- Manual selection: pilih Week lalu pilih Day 1–5
+- Day 1–4: 5 kata baru
+- Day 5: Weekly Review
+- Learning Engine: See, Hear, Say, Remember, Use, Play
+- XP, streak, mastery, progress
 - PWA / Service Worker
+- Progress tersimpan di browser (localStorage)
 
-## Deploy to Vercel
-Static project. No build command is required.
-
-## Important
-Progress is stored locally in the browser using localStorage. Cloud sync and parent dashboard are planned for a later phase.
-
-## v4 stability fix
-Vocabulary is embedded in the app bundle as a fallback-free startup source, so the learning engine does not depend on a successful JSON fetch. The JSON remains in data/ as the canonical editable dataset.
+Maryam tidak dipaksa mengikuti urutan. Day yang sudah selesai ditandai ✓, tetapi semua Day yang tersedia tetap dapat dipilih kembali.

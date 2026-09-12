@@ -1,7 +1,7 @@
-const CACHE = "english-maryam-v8";
+const CACHE = "english-maryam-v9";
 const FILES = [
-  "./","./index.html","./css/style.css","./js/app.js?v=8",
-  "./data/vocabulary.json?v=8","./data/course.json","./manifest.json"
+  "./","./index.html","./css/style.css","./js/app.js?v=9",
+  "./data/vocabulary.json?v=9","./data/course.json","./manifest.json"
 ];
 self.addEventListener("install",e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES)));self.skipWaiting()});
 self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==CACHE).map(x=>caches.delete(x)))));self.clients.claim()});

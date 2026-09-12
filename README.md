@@ -1,13 +1,15 @@
 # English 5 Words a Day — Maryam
 
-## V7 — Learning Engine Controls Fixed
+## V8 — Weekly Review
 
-- 52 weeks / 208 daily lessons / 1,040 vocabulary entries
+- 52 weeks / 208 lessons / 1,040 vocabulary
 - Manual Week → Day 1–5 selection
-- Day 1–4: 5 new words
-- Day 5: Weekly Review
-- Learning Engine: See, Hear, Say, Remember, Use, Play
-- Step buttons and Lanjut/Kembali use robust event delegation
-- XP, streak, mastery, progress
-- PWA / Service Worker with v7 cache
-- Progress saved in browser localStorage
+- Day 1–4: Learning Engine
+- Day 5: 20-question Weekly Review
+- Review types: meaning, listening, spelling, matching
+- Randomized questions
+- Weekly score and percentage
+- XP and mastery updates
+- Repeat Review
+- PWA / Service Worker
+- Local progress

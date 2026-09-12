@@ -69,3 +69,7 @@ footer{text-align:center;border-top:1px solid var(--border);padding:28px;color:v
 #dayModal .modal-overlay{
   z-index:1;
 }
+
+/* V8 — Weekly Review */
+.review-question{max-width:720px;margin:auto;text-align:center;padding:12px 0}.review-progress{color:var(--muted);margin:8px 0 18px}.review-word{font-size:58px;font-weight:950;margin:12px 0 25px}.review-listen{border:0;background:var(--soft);color:var(--primary);border-radius:15px;padding:14px 20px;font-weight:900;margin:5px 0 22px}.matching-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;text-align:left}.matching-grid>div{display:grid;gap:9px}.match-item{border:2px solid var(--border);background:#fff;border-radius:13px;padding:13px;font-weight:800}.match-item.selected{border-color:#a5b4fc;background:var(--soft);color:var(--primary)}.match-item.wrong{border-color:#ef4444;background:#fef2f2}.review-score-bar{height:12px;background:#eef0f5;border-radius:999px;overflow:hidden;max-width:480px;margin:0 auto 20px}.review-score-bar div{height:100%;background:var(--primary);border-radius:999px}.review-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+@media(max-width:650px){.review-word{font-size:45px}.matching-grid{grid-template-columns:1fr}}

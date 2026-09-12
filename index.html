@@ -4,54 +4,106 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#4f46e5">
-<meta name="description" content="English 5 Words a Day — belajar Bahasa Inggris bersama Maryam.">
+<meta name="description" content="English 5 Words a Day — aplikasi belajar Bahasa Inggris untuk Maryam.">
 <link rel="manifest" href="manifest.json">
 <link rel="stylesheet" href="css/style.css">
 <title>English Time — Maryam</title>
 </head>
 <body>
 <header class="app-header">
-  <div class="brand"><div class="brand-icon">📚</div><div><h1>English Time</h1><p>5 Words a Day</p></div></div>
-  <button id="installButton" class="install-button hidden">📱 Install</button>
+  <div class="brand">
+    <div class="brand-icon">📚</div>
+    <div><h1>English Time</h1><p>5 Words a Day</p></div>
+  </div>
+  <div class="header-actions">
+    <div class="streak-mini">🔥 <span id="streakMini">0</span></div>
+    <button id="installButton" class="install-button hidden">📱 Install</button>
+  </div>
 </header>
 
 <main class="container">
   <section class="hero">
-    <div><span class="pill">🌟 Let's Learn English!</span><h2>Hello, Maryam! 👋</h2>
-    <p>Belajar 5 kata Bahasa Inggris setiap hari dengan cara yang menyenangkan.</p>
-    <button id="continueButton" class="primary">▶ Mulai Belajar</button></div>
-    <div class="hero-character">👧🏻</div>
+    <div>
+      <span class="pill">🌟 Let's Learn English!</span>
+      <h2>Hello, Maryam! 👋</h2>
+      <p>Belajar 5 kata setiap hari melalui melihat, mendengar, berbicara, mengingat, dan bermain.</p>
+      <button id="continueButton" class="primary">▶ Lanjut Belajar</button>
+    </div>
+    <div class="hero-character" aria-hidden="true">👧🏻</div>
+  </section>
+
+  <section class="stats-grid">
+    <div class="stat-card"><span>⭐ XP</span><strong id="xpValue">0</strong></div>
+    <div class="stat-card"><span>📚 Kata</span><strong id="wordsLearned">0</strong></div>
+    <div class="stat-card"><span>🔥 Streak</span><strong id="streakValue">0</strong></div>
+    <div class="stat-card"><span>🏆 Mastered</span><strong id="masteredValue">0</strong></div>
   </section>
 
   <section class="card">
-    <div class="heading"><div><span class="eyebrow">YOUR PROGRESS</span><h2>Perjalanan Belajar</h2></div><strong id="progressPercent">0%</strong></div>
+    <div class="heading">
+      <div><span class="eyebrow">YOUR PROGRESS</span><h2>Perjalanan Belajar</h2></div>
+      <strong id="progressPercent">0%</strong>
+    </div>
     <div class="progress"><div id="progressBar"></div></div>
-    <div class="progress-info"><span id="wordsLearned">0 kata dipelajari</span><span>52 Weeks</span></div>
+    <div class="progress-info"><span id="progressLabel">0 dari 1.040 kata</span><span>52 Weeks</span></div>
   </section>
 
-  <section class="card">
-    <div class="heading"><div><span class="eyebrow">CONTINUE</span><h2 id="currentLessonTitle">Week 1 · Day 1</h2><p id="currentLessonTopic">Numbers</p></div><span class="day-badge">DAY 1</span></div>
+  <section class="card current-card">
+    <div class="heading">
+      <div>
+        <span class="eyebrow">CONTINUE</span>
+        <h2 id="currentLessonTitle">Week 1 · Day 1</h2>
+        <p id="currentLessonTopic">Numbers</p>
+      </div>
+      <span id="dayBadge" class="day-badge">DAY 1</span>
+    </div>
     <div id="wordPreview" class="word-preview"></div>
     <button id="lessonButton" class="secondary">Belajar Sekarang →</button>
   </section>
 
   <section>
-    <div class="heading"><div><span class="eyebrow">LEARNING PATH</span><h2>52 Minggu Belajar</h2></div></div>
+    <div class="heading">
+      <div><span class="eyebrow">LEARNING PATH</span><h2>52 Minggu Belajar</h2></div>
+    </div>
     <div id="weeksGrid" class="weeks-grid"></div>
   </section>
 </main>
 
 <footer>English 5 Words a Day · Made with ❤️ for learning</footer>
 
-<div id="lessonModal" class="modal hidden">
+<!-- LEARNING ENGINE -->
+<div id="lessonModal" class="modal hidden" aria-hidden="true">
   <div class="modal-overlay"></div>
-  <div class="modal-content">
-    <button id="closeModal" class="close">×</button>
-    <span id="modalWeek" class="eyebrow">WEEK 1 · DAY 1</span>
-    <h2 id="modalTitle">Numbers</h2><p>Pelajari kata-kata hari ini.</p>
-    <div id="lessonWords" class="lesson-words"></div>
+  <div class="learning-shell">
+    <button id="closeModal" class="close" aria-label="Tutup">×</button>
+
+    <div class="learning-top">
+      <div>
+        <span id="engineWeekDay" class="eyebrow">WEEK 1 · DAY 1</span>
+        <h2 id="engineTitle">Numbers</h2>
+      </div>
+      <div class="xp-badge">⭐ <span id="engineXp">0</span> XP</div>
+    </div>
+
+    <div class="stepper" id="stepper">
+      <button data-step="see" class="step active"><b>1</b><span>See</span></button>
+      <button data-step="hear" class="step"><b>2</b><span>Hear</span></button>
+      <button data-step="say" class="step"><b>3</b><span>Say</span></button>
+      <button data-step="remember" class="step"><b>4</b><span>Remember</span></button>
+      <button data-step="use" class="step"><b>5</b><span>Use</span></button>
+      <button data-step="play" class="step"><b>6</b><span>Play</span></button>
+    </div>
+
+    <div id="engineContent" class="engine-content"></div>
+
+    <div class="engine-nav">
+      <button id="prevStep" class="nav-btn secondary">← Kembali</button>
+      <span id="stepCounter">1 / 6</span>
+      <button id="nextStep" class="nav-btn primary">Lanjut →</button>
+    </div>
   </div>
 </div>
+
 <script src="js/app.js"></script>
 </body>
 </html>

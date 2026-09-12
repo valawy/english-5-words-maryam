@@ -2,12 +2,21 @@
 
 Aplikasi belajar Bahasa Inggris berbasis HTML, CSS, JavaScript, JSON, dan PWA.
 
-## Deploy
-1. Upload seluruh isi folder ini ke GitHub.
-2. Import repository ke Vercel.
-3. Framework Preset: Other / Static.
-4. Build Command: kosong.
-5. Output Directory: `.`
+## Current release: Learning Engine
+- 52 weeks
+- 208 learning days
+- 1,040 vocabulary entries
+- See It
+- Hear It
+- Say It (speech recognition when supported)
+- Remember It (meaning quiz)
+- Use It (sentence practice)
+- Play It (spelling game)
+- XP, streak, mastery, and local progress
+- PWA / Service Worker
 
-## Catatan
-Versi awal ini adalah fondasi. Materi 52 minggu dan fitur latihan lengkap akan ditambahkan bertahap.
+## Deploy to Vercel
+Static project. No build command is required.
+
+## Important
+Progress is stored locally in the browser using localStorage. Cloud sync and parent dashboard are planned for a later phase.

@@ -1,0 +1,11 @@
+{
+  "name": "English 5 Words a Day — Maryam",
+  "short_name": "English Maryam",
+  "description": "Aplikasi belajar Bahasa Inggris 5 kata sehari untuk Maryam.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f6f7fb",
+  "theme_color": "#4f46e5",
+  "orientation": "portrait-primary",
+  "icons": []
+}

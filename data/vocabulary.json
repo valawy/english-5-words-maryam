@@ -1,0 +1,39 @@
+[
+  {
+    "week": 1,
+    "day": 1,
+    "topic": "Numbers",
+    "words": [
+      {
+        "word": "one",
+        "meaning": "satu",
+        "pronunciation": "wan",
+        "example": "I have one book."
+      },
+      {
+        "word": "two",
+        "meaning": "dua",
+        "pronunciation": "too",
+        "example": "I have two pencils."
+      },
+      {
+        "word": "three",
+        "meaning": "tiga",
+        "pronunciation": "three",
+        "example": "I see three birds."
+      },
+      {
+        "word": "four",
+        "meaning": "empat",
+        "pronunciation": "for",
+        "example": "I have four books."
+      },
+      {
+        "word": "five",
+        "meaning": "lima",
+        "pronunciation": "five",
+        "example": "I have five fingers."
+      }
+    ]
+  }
+]

@@ -20,3 +20,6 @@ Static project. No build command is required.
 
 ## Important
 Progress is stored locally in the browser using localStorage. Cloud sync and parent dashboard are planned for a later phase.
+
+## v4 stability fix
+Vocabulary is embedded in the app bundle as a fallback-free startup source, so the learning engine does not depend on a successful JSON fetch. The JSON remains in data/ as the canonical editable dataset.

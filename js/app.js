@@ -477,38 +477,79 @@ function updateStreak() {
 }
 
 function setupEvents() {
-  $("lessonButton").addEventListener("click", () => openDaySelector(state.week));
-  $("continueButton").addEventListener("click", () => openDaySelector(state.week));
-  $("closeModal").addEventListener("click", closeEngine);
-  document.querySelector(".modal-overlay:not(.day-overlay)").addEventListener("click", closeEngine);
-
-  $("closeDayModal").addEventListener("click", closeDaySelector);
-  $("dayModal .day-overlay").addEventListener("click", closeDaySelector);
-
-  $("prevStep").addEventListener("click", () => {
-    if (state.step > 0) {
-      state.step--;
-      state.activeWord = 0;
-      renderEngine();
+  // Use event delegation for the Learning Engine controls.
+  // This prevents buttons from losing their handlers when engineContent is re-rendered.
+  document.addEventListener("click", (event) => {
+    const stepButton = event.target.closest("#stepper .step");
+    if (stepButton) {
+      event.preventDefault();
+      event.stopPropagation();
+      const index = [...document.querySelectorAll("#stepper .step")].indexOf(stepButton);
+      if (index >= 0) {
+        state.step = index;
+        state.activeWord = 0;
+        renderEngine();
+      }
+      return;
     }
-  });
 
-  $("nextStep").addEventListener("click", () => {
-    if (state.step < STEPS.length - 1) {
-      state.step++;
-      state.activeWord = 0;
-      renderEngine();
-    } else {
-      completeLesson();
+    if (event.target.closest("#nextStep")) {
+      event.preventDefault();
+      event.stopPropagation();
+      if (state.step < STEPS.length - 1) {
+        state.step += 1;
+        state.activeWord = 0;
+        renderEngine();
+      } else {
+        completeLesson();
+      }
+      return;
     }
-  });
 
-  document.querySelectorAll(".step").forEach((button, index) => {
-    button.addEventListener("click", () => {
-      state.step = index;
-      state.activeWord = 0;
-      renderEngine();
-    });
+    if (event.target.closest("#prevStep")) {
+      event.preventDefault();
+      event.stopPropagation();
+      if (state.step > 0) {
+        state.step -= 1;
+        state.activeWord = 0;
+        renderEngine();
+      }
+      return;
+    }
+
+    if (event.target.closest("#lessonButton")) {
+      event.preventDefault();
+      openDaySelector(state.week);
+      return;
+    }
+
+    if (event.target.closest("#continueButton")) {
+      event.preventDefault();
+      openDaySelector(state.week);
+      return;
+    }
+
+    if (event.target.closest("#closeModal")) {
+      event.preventDefault();
+      closeEngine();
+      return;
+    }
+
+    if (event.target.closest("#closeDayModal")) {
+      event.preventDefault();
+      closeDaySelector();
+      return;
+    }
+
+    if (event.target.closest("#dayModal .day-overlay")) {
+      closeDaySelector();
+      return;
+    }
+
+    if (event.target.closest("#lessonModal .modal-overlay")) {
+      closeEngine();
+      return;
+    }
   });
 }
 

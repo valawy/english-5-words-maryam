@@ -1,14 +1,13 @@
 # English 5 Words a Day — Maryam
 
-## V6 — Manual Day Selection + Weekly Review
+## V7 — Learning Engine Controls Fixed
 
 - 52 weeks / 208 daily lessons / 1,040 vocabulary entries
-- Manual selection: pilih Week lalu pilih Day 1–5
-- Day 1–4: 5 kata baru
+- Manual Week → Day 1–5 selection
+- Day 1–4: 5 new words
 - Day 5: Weekly Review
 - Learning Engine: See, Hear, Say, Remember, Use, Play
+- Step buttons and Lanjut/Kembali use robust event delegation
 - XP, streak, mastery, progress
-- PWA / Service Worker
-- Progress tersimpan di browser (localStorage)
-
-Maryam tidak dipaksa mengikuti urutan. Day yang sudah selesai ditandai ✓, tetapi semua Day yang tersedia tetap dapat dipilih kembali.
+- PWA / Service Worker with v7 cache
+- Progress saved in browser localStorage

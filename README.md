@@ -1,17 +1,15 @@
 # English 5 Words a Day — Maryam
 
-## V9 — Mastery & Smart Review
+## V10 — Visual Learning
 
 - 52 weeks / 208 lessons / 1,040 vocabulary
-- Manual Week → Day 1–5
+- Manual Week → Day 1–5 selection
 - Day 1–4 Learning Engine
-- Day 5 Weekly Review (20 questions)
-- Mastery levels: NEW → LEARNING → PRACTICING → GOOD → STRONG → MASTERED
-- Per-word attempts, correct count, streak, last seen, next review
-- Spaced intervals: immediate, 1, 3, 7, 14, 30 days
-- Smart Review card on home
-- Smart Review prioritizes words due for review
-- Review types: meaning, listening, spelling, matching
-- XP, streak, progress
+- Day 5 Weekly Review
+- Mastery / Smart Review foundation
+- **Week 1 visual assets:** original SVG illustrations based on the vocabulary concepts in the source PDF; no PDF artwork is bundled.
 - PWA / Service Worker
-- Local browser storage
+- Local progress
+
+### V10 visual pilot
+Week 1 (20 words) now displays original visual cards in SEE and compact visuals in HEAR. After visual approval, the same asset pattern can be expanded to Weeks 2–52.

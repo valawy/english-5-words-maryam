@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", init);
 async function init() {
   loadState();
   try {
-    const response = await fetch("data/vocabulary.json?v=6", { cache: "no-store" });
+    const response = await fetch("data/vocabulary.json?v=10", { cache: "no-store" });
     if (!response.ok) throw new Error("Vocabulary HTTP " + response.status);
     vocabulary = await response.json();
   } catch (error) {
@@ -26,7 +26,7 @@ async function init() {
   renderHome();
   setupEvents();
   if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("sw.js?v=6").catch(() => {});
+    navigator.serviceWorker.register("sw.js?v=10").catch(() => {});
   }
 }
 
@@ -244,6 +244,7 @@ function buildStep(type, item) {
       <h3 class="quiz-title">${item.day === 5 ? "Review 5 kata minggu ini 👀" : "Kenali 5 kata hari ini 👀"}</h3>
       <div class="word-grid">${item.words.map(w => `
         <article class="learning-word">
+          ${w.image ? `<div class="word-image-wrap"><img class="word-image" src="${escapeAttr(w.image)}" alt="${escapeAttr(w.word)}" loading="lazy"></div>` : ""}
           <div class="word">${escapeHTML(w.word)}</div>
           <div class="meaning">${escapeHTML(w.meaning)}</div>
           <div class="sound-row">
@@ -258,7 +259,7 @@ function buildStep(type, item) {
       <div><span class="eyebrow">STEP 2 · HEAR IT</span>
       <h3 class="quiz-title">Dengarkan dan ulangi 🔊</h3>
       <div class="hear-list">${item.words.map(w => `
-        <div class="hear-card"><div><strong>${escapeHTML(w.word)}</strong><div class="tiny">${escapeHTML(w.meaning)}</div></div>
+        <div class="hear-card"><div class="hear-word-wrap">${w.image ? `<img class="hear-image" src="${escapeAttr(w.image)}" alt="">` : ""}<div><strong>${escapeHTML(w.word)}</strong><div class="tiny">${escapeHTML(w.meaning)}</div></div></div>
         <button type="button" class="sound-btn" data-speak="${escapeAttr(w.word)}">🔊 Listen</button></div>`).join("")}</div>
       <div class="support-note">Dengarkan 2–3 kali, lalu ucapkan sendiri.</div></div>`;
   }

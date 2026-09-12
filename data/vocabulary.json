@@ -11,7 +11,8 @@
         "pronunciation": "wan",
         "example": "I can use the word one.",
         "translation": "Saya dapat menggunakan kata one.",
-        "mastery": 0
+        "mastery": 0,
+        "image": "assets/images/week-01-one.svg"
       },
       {
         "id": "w01d01_02",
@@ -20,7 +21,8 @@
         "pronunciation": "too",
         "example": "I can use the word two.",
         "translation": "Saya dapat menggunakan kata two.",
-        "mastery": 0
+        "mastery": 0,
+        "image": "assets/images/week-01-two.svg"
       },
       {
         "id": "w01d01_03",
@@ -29,7 +31,8 @@
         "pronunciation": "three",
         "example": "I can use the word three.",
         "translation": "Saya dapat menggunakan kata three.",
-        "mastery": 0
+        "mastery": 0,
+        "image": "assets/images/week-01-three.svg"
       },
       {
         "id": "w01d01_04",
@@ -38,7 +41,8 @@
         "pronunciation": "for",
         "example": "I can use the word four.",
         "translation": "Saya dapat menggunakan kata four.",
-        "mastery": 0
+        "mastery": 0,
+        "image": "assets/images/week-01-four.svg"
       },
       {
         "id": "w01d01_05",
@@ -47,7 +51,8 @@
         "pronunciation": "five",
         "example": "I can use the word five.",
         "translation": "Saya dapat menggunakan kata five.",
-        "mastery": 0
+        "mastery": 0,
+        "image": "assets/images/week-01-five.svg"
       }
     ]
   },
@@ -63,7 +68,8 @@
         "pronunciation": "pine-ap-ul",
         "example": "I can use the word pineapple.",
         "translation": "Saya dapat menggunakan kata pineapple.",
-        "mastery": 0
+        "mastery": 0,
+        "image": "assets/images/week-01-pineapple.svg"
       },
       {
         "id": "w01d02_02",
@@ -72,7 +78,8 @@
         "pronunciation": "grayps",
         "example": "I can use the word grapes.",
         "translation": "Saya dapat menggunakan kata grapes.",
-        "mastery": 0
+        "mastery": 0,
+        "image": "assets/images/week-01-grapes.svg"
       },
       {
         "id": "w01d02_03",
@@ -81,7 +88,8 @@
         "pronunciation": "buh-na-nuh",
         "example": "I can use the word banana.",
         "translation": "Saya dapat menggunakan kata banana.",
-        "mastery": 0
+        "mastery": 0,
+        "image": "assets/images/week-01-banana.svg"
       },
       {
         "id": "w01d02_04",
@@ -90,7 +98,8 @@
         "pronunciation": "or-inj",
         "example": "I can use the word orange.",
         "translation": "Saya dapat menggunakan kata orange.",
-        "mastery": 0
+        "mastery": 0,
+        "image": "assets/images/week-01-orange.svg"
       },
       {
         "id": "w01d02_05",
@@ -99,7 +108,8 @@
         "pronunciation": "ap-ul",
         "example": "I can use the word apple.",
         "translation": "Saya dapat menggunakan kata apple.",
-        "mastery": 0
+        "mastery": 0,
+        "image": "assets/images/week-01-apple.svg"
       }
     ]
   },
@@ -115,7 +125,8 @@
         "pronunciation": "green",
         "example": "I can use the word green.",
         "translation": "Saya dapat menggunakan kata green.",
-        "mastery": 0
+        "mastery": 0,
+        "image": "assets/images/week-01-green.svg"
       },
       {
         "id": "w01d03_02",
@@ -124,7 +135,8 @@
         "pronunciation": "bloo",
         "example": "I can use the word blue.",
         "translation": "Saya dapat menggunakan kata blue.",
-        "mastery": 0
+        "mastery": 0,
+        "image": "assets/images/week-01-blue.svg"
       },
       {
         "id": "w01d03_03",
@@ -133,7 +145,8 @@
         "pronunciation": "red",
         "example": "I can use the word red.",
         "translation": "Saya dapat menggunakan kata red.",
-        "mastery": 0
+        "mastery": 0,
+        "image": "assets/images/week-01-red.svg"
       },
       {
         "id": "w01d03_04",
@@ -142,7 +155,8 @@
         "pronunciation": "yel-oh",
         "example": "I can use the word yellow.",
         "translation": "Saya dapat menggunakan kata yellow.",
-        "mastery": 0
+        "mastery": 0,
+        "image": "assets/images/week-01-yellow.svg"
       },
       {
         "id": "w01d03_05",
@@ -151,7 +165,8 @@
         "pronunciation": "pur-pul",
         "example": "I can use the word purple.",
         "translation": "Saya dapat menggunakan kata purple.",
-        "mastery": 0
+        "mastery": 0,
+        "image": "assets/images/week-01-purple.svg"
       }
     ]
   },
@@ -167,7 +182,8 @@
         "pronunciation": "werdz",
         "example": "I can use the word words.",
         "translation": "Saya dapat menggunakan kata words.",
-        "mastery": 0
+        "mastery": 0,
+        "image": "assets/images/week-01-words.svg"
       },
       {
         "id": "w01d04_02",
@@ -176,7 +192,8 @@
         "pronunciation": "kul-erz",
         "example": "I can use the word colours.",
         "translation": "Saya dapat menggunakan kata colours.",
-        "mastery": 0
+        "mastery": 0,
+        "image": "assets/images/week-01-colours.svg"
       },
       {
         "id": "w01d04_03",
@@ -185,7 +202,8 @@
         "pronunciation": "bord",
         "example": "I can use the word board.",
         "translation": "Saya dapat menggunakan kata board.",
-        "mastery": 0
+        "mastery": 0,
+        "image": "assets/images/week-01-board.svg"
       },
       {
         "id": "w01d04_04",
@@ -194,7 +212,8 @@
         "pronunciation": "tee-cher",
         "example": "I can use the word teacher.",
         "translation": "Saya dapat menggunakan kata teacher.",
-        "mastery": 0
+        "mastery": 0,
+        "image": "assets/images/week-01-teacher.svg"
       },
       {
         "id": "w01d04_05",
@@ -203,7 +222,8 @@
         "pronunciation": "klas",
         "example": "I can use the word class.",
         "translation": "Saya dapat menggunakan kata class.",
-        "mastery": 0
+        "mastery": 0,
+        "image": "assets/images/week-01-class.svg"
       }
     ]
   },
